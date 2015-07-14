@@ -7,7 +7,7 @@ body{
 header{
     background: white;
     width: 100%;
-    padding: 40px;
+    padding: 0;
     color: #444;
     text-align: center;
 }
@@ -16,13 +16,65 @@ nav ul {
     background-color: #f7f7f7;
     overflow: hidden;
     color: #444;
+    margin: 0;
     padding: 0;
     text-align: center;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
 }
 
 nav ul li {
     display: inline-block;
     padding: 20px;
+}
+
+nav ul li:hover{
+    background-color: #e2e2e2;
+}
+
+header a, nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    padding: 40px;
+    line-height: 1.5em;
+    font-size: 0.9em;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.handle{
+    width: 100%;
+    background: #9e9e9e;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: inherit;
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    nav ul{
+        max-height: 0;
+    }
+    .showing{
+        max-height: 20em;
+    }
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+    }
+    .handle{
+        display: block;
+    }
 }
 
 /*

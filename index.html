@@ -3,11 +3,12 @@
    <head>
       <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="/styling/qermWebpageStyles.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
       <title>Nicholas Kullman</title>
    </head>
    <body> <!--double-height nav-bar body -->
          <header>
-               <h1>Nicholas Kullman</h1>
+               <a href="https://nkullman.github.io"><h1>Nicholas Kullman</h1></a>
          </header>
          <nav>
                <ul>
@@ -17,21 +18,8 @@
                      <a href="/seattle/"><li>Discover Seattle</li></a>
                      <a href="/contact/"><li>Contact</li></a> 
                </ul>
+               <div class="handle">Menu</div>
          </nav>
-               <div class = "header-cont">
-                     <div class="logo-div"><h1 class="logo-h1"><a href="https://nkullman.github.io">Nicholas Kullman </a></h1></div>
-                     
-                     <nav>
-                     <ul id="nav" class="menu">
-                           <a href="/about/"><li>About me</li></a>
-                           <a href="/research/"><li>Research</li></a>
-                           <a href="/extprojects/"><li>Tangents</li></a>
-                           <a href="/seattle/"><li>Discover Seattle</li></a>
-                           <a href="/contact/"><li>Contact</li></a>
-                     </ul>  
-                     </nav>
-               </div>
-         </header>
          
       <main>
             <p>
@@ -43,6 +31,11 @@
             <p>Content for footer goes here.</p>
          </div>
       </footer>
+      <script>
+            d3.select(".handle").on("click", function(){
+                  this.classed("showing");
+            })
+      </script>
    </body>
    
   <!-- 
