@@ -1,79 +1,54 @@
 /* The foundation for the below lifted from http://raw.densitydesign.org/ */
 body {
-	width: 100%;
-	margin: auto;
+	margin: 0;
+	padding: 0;
 }
 
-.container {
-	width: 960px;
+header div,main {
+	max-width: 960px;
 	margin: 0 auto;
+	padding: 0 1em 0 1em;
 }
 
-.header {
+header {
 	background: white;
 	width: 100%;
 	top: 0;
 	position: fixed;
-}
-
-.logo {
-	float: left;
-	font-size: 15px;
-}
-
-.header a {
-	font-family: "Helvetica";
-	text-decoration: none;
+	font-family: helvetica, arial, sans-serif;
 	color: #444;
 }
 
-.header li {
-	list-style: none;
+header h1 {
 	float: left;
-	margin-left: 15px;
-	padding-top: 15px;
+	/*font-family: helvetica, arial, sans-serif*/
 }
 
-.nav {
-	float: right;
-}
-
-/*header {
-	height: 80px;
-	margin: 0;
-	padding: 0.8em;
-	background: white;
-	background-size: cover;
-}
-
-header ul{
-	list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-header li {
-	float: none;
+main {
+	padding: 5em 1em 1em 1em;
 }
 
 header a {
-    display: block;
-    width: 60px;
+	text-decoration: none;
 }
 
-.header-cont {
-	width: 100%;
-	position: fixed;
-	top: 0;
-	clear: both;
+header li {
+	display: inline-block;
+	margin-right: 1em;
+}
+header li a:hover {
+	color: blue;
 }
 
-.container {
-	margin: auto;
-	max-width: 800px;
+header ul {
+	float: right;
+	list-style-type: none;
+	padding-top: 1em;
 }
 
-nav-cont {
-	margin: auto;
-} */
+@media only screen and (max-width: 520px) {
+	header { text-align: center; position: relative; }
+	main { padding: 1em; }
+	header h1 { float: none; margin: 0; }
+	header ul { float: none; margin: auto;}
+}
