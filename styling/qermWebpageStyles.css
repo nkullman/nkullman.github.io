@@ -33,6 +33,10 @@ nav ul {
     font: bold;
 }
 
+#headline-li{
+    padding-right: 30%;
+}
+
 #headline-li:hover{
     background-color: #f7f7f7;
 }
