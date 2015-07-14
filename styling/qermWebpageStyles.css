@@ -1,8 +1,10 @@
 /* The foundation for the below lifted from http://raw.densitydesign.org/ */
 header {
 	height: 80px;
-	margin: auto;
+	margin: 0;
 	padding: 0.8em;
+	background: white;
+	background-size: cover;
 }
 
 header ul{
