@@ -9,6 +9,11 @@ body {
 	margin: 0 auto;
 }
 
+.header {
+	background: #6396bc;
+	width: 100%;
+}
+
 /*header {
 	height: 80px;
 	margin: 0;
