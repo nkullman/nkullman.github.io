@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-	background: #6396bc;
+	background: white;
 	width: 100%;
 	top: 0;
 	position: fixed;
@@ -24,7 +24,7 @@ body {
 
 .header a {
 	text-decoration: none;
-	color: white;
+	color: #444;
 }
 
 .header li {
