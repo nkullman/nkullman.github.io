@@ -18,14 +18,24 @@ body {
 
 .logo {
 	float: left;
+	font-family: "Helvetica";
+	font-size: 15px;
 }
 
 .header a {
 	text-decoration: none;
+	color: white;
 }
 
 .header li {
 	list-style: none;
+	float: left;
+	margin-left: 15px;
+	padding-top: 15px;
+}
+
+.nav {
+	float: right;
 }
 
 /*header {
