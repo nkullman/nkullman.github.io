@@ -1,7 +1,7 @@
 /* The foundation for the below lifted from http://raw.densitydesign.org/ */
 header {
 	height: 80px;
-	margin: 0;
+	margin: auto;
 	padding: 0.8em;
 }
 
@@ -13,7 +13,7 @@ header ul{
 }
 
 header li {
-	float: left;
+	float: none;
 }
 
 header a {
@@ -31,4 +31,8 @@ header a {
 .container {
 	margin: auto;
 	max-width: 800px;
+}
+
+nav-cont {
+	margin: auto;
 }
