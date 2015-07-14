@@ -32,8 +32,9 @@
          </div>
       </footer>
       <script>
-            d3.select(".handle").on("click", function(){
-                  this.classed("showing");
+            var handle = d3.select(".handle");
+            handle.on("click", function(){
+                  handle.classed("showing", !handle.classed("showing"));
             })
       </script>
    </body>
