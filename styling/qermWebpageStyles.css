@@ -19,6 +19,8 @@ header[role=banner] {
   zoom: 1;
   z-index: 5;
   height: 80px;
+  display: block;
+  position: fixed !important;
 }
 
 nav[role=navigation]
