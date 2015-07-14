@@ -59,7 +59,7 @@ main {
     display: none;
 }
 
-.handle img {
+.handle span {
     float:right;
 }
 
