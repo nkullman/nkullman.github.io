@@ -1,12 +1,20 @@
 /* The foundation for the below lifted from http://raw.densitydesign.org/ */
 
-body {
-	margin: 0;
-	padding: 0;
+header ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.header {
-	height: 80px;
+header li {
+	float: left;
+}
+
+header a {
+    display: block;
+    width: 60px;
+    background-color: #dddddd;
 }
 
 .header-cont {
