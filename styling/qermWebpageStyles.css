@@ -17,7 +17,7 @@ header {
 	position: fixed;
 	font-family: helvetica, arial, sans-serif;
 	color: #444;
-	border-bottom:0 solid #CCC;
+	border-bottom:1px solid #f7f7f7;
 }
 
 header h1 {
