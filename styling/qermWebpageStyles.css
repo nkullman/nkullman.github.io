@@ -12,6 +12,16 @@ body {
 .header {
 	background: #6396bc;
 	width: 100%;
+	top: 0;
+	position: fixed;
+}
+
+.logo {
+	float: left;
+}
+
+.header a {
+	text-decoration: none;
 }
 
 /*header {
