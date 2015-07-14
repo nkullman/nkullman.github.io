@@ -18,11 +18,11 @@ body {
 
 .logo {
 	float: left;
-	font-family: "Helvetica";
 	font-size: 15px;
 }
 
 .header a {
+	font-family: "Helvetica";
 	text-decoration: none;
 	color: #444;
 }
