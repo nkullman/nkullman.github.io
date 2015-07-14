@@ -1,20 +1,76 @@
-<HTML>
-<!-- Dummy webpage to check that user page is working -->
-<HEAD>
-<TITLE>Your Title Here</TITLE>
-</HEAD>
-<BODY BGCOLOR="FFFFFF">
-<CENTER><IMG SRC="clouds.jpg" ALIGN="BOTTOM"> </CENTER>
-<HR>
-<a href="/about/">About</a>
-is a link to another nifty site
-<H1>This is a Header</H1>
-<H2>This is a Medium Header</H2>
-Send me mail at <a href="mailto:support@yourcompany.com">
-support@yourcompany.com</a>.
-<P> This is a new paragraph!
-<P> <B>This is a new paragraph!</B>
-<BR> <B><I>This is a new sentence without a paragraph break, in bold italics.</I></B>
-<HR>
-</BODY>
-</HTML>
+<!doctype html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="/styling/qermWebpageStyles.css">
+      <title>Nicholas Kullman</title>
+   </head>
+   <body>
+      <div id="headline">
+         <div class = "container">
+            <!--MyComment<header>
+               <h1>Nicholas Kullman</h1>
+               </header>-->
+            <header role="banner">
+               <div id="header-bg"></div>
+               <div id="inner-header" class="wrapper clearfix">
+                  <div class="row">
+                     <div class="twelve columns">
+                        <!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> 
+                           <div id="logo" class="h1">
+                           	<span><a href="http://raw.densitydesign.org" rel="nofollow">
+                                                <span id="blog-name">Raw</span>
+                                                                       </a>
+                             	</span>
+                           </div>-->
+                        <!-- if you'd like to use the site description you can un-comment it below -->
+                        <div class="menu-button"></div>
+                        <nav role="navigation">
+                           <div class="menu-main-container">
+                              <ul id="nav" class="menu sf-menu sf-js-enabled">
+                                 <li id="menu-item-aboutme" class="menu-item menu-item-type-post_type menu-item-object-page"><a data-name="about-me" data-slide="container-23" class="menu-item menu-item-type-post_type menu-item-object-page" href="/about/">About me</a></li>
+                                 <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page"><a data-name="research" data-slide="container-24" class="menu-item menu-item-type-post_type menu-item-object-page" href="/research/">Research</a></li>
+                                 <li id="menu-item-675" class="menu-item menu-item-type-custom menu-item-object-custom"><a data-name="ext-projects" data-slide="container-675" class="menu-item menu-item-type-custom menu-item-object-custom" href="/extprojects/">Tangents</a></li>
+                                 <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page"><a data-name="seattle" data-slide="container-25" class="menu-item menu-item-type-post_type menu-item-object-page" href="/seattle/">Discover Seattle</a></li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+               <!-- end #inner-header -->
+            </header>
+            <!--MyComment<div id="blurb">
+               <p>MS candidate, Quantitative Ecology and Resource Management, UW</p>
+               </div>-->
+         </div>
+      </div>
+      <div id="section1">
+         <div class = "container">
+            <h2>Work</h2>
+            <p>I work with Sandor Toth in the School of Environmental and Forest Sciences studying optimal forest management under climate change</p>
+            <ul>
+               <li> list item </li>
+            </ul>
+         </div>
+      </div>
+      <div id="section2">
+      <div class = "container">
+         <h2>another section</h2>
+         <p>with more content</p>
+         <div id="images">
+         </div>
+      </div>
+      <div id="section3">
+         <div class = "container">
+            <h2>section 3</h2>
+            <p>section 3 content</p>
+         </div>
+      </div>
+      <footer>
+         <div class = "container">
+            <p>Content for footer goes here.</p>
+         </div>
+      </footer>
+   </body>
+</html>
