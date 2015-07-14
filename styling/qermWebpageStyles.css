@@ -1,6 +1,8 @@
 /* The foundation for the below lifted from http://raw.densitydesign.org/ */
 header {
 	height: 80px;
+	margin: 0;
+	padding: 0.8em;
 }
 
 header ul{
@@ -17,7 +19,6 @@ header li {
 header a {
     display: block;
     width: 60px;
-    background-color: orange;
 }
 
 .header-cont {
