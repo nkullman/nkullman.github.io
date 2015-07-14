@@ -59,6 +59,10 @@ main {
     display: none;
 }
 
+.handle img {
+    float:right;
+}
+
 @media screen and (max-width: 650px) {
     nav ul{
         max-height: 0;
