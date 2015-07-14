@@ -32,9 +32,9 @@
          </div>
       </footer>
       <script>
-            var handle = d3.select(".handle");
-            handle.on("click", function(){
-                  handle.classed("showing", !handle.classed("showing"));
+            d3.select(".handle").on("click", function(){
+                  var navul = d3.select("nav ul");
+                  navul.classed("showing", !navul.classed("showing"));
             })
       </script>
    </body>
