@@ -55,7 +55,7 @@ main {
     box-sizing: border-box;
     padding: 15px 10px;
     cursor: pointer;
-    color: inherit;
+    color: white;
     display: none;
 }
 
