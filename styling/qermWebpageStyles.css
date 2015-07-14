@@ -27,6 +27,10 @@ header h1 {
 
 main {
 	padding: 5em 1em 1em 1em;
+	line-height: 1.5em;
+	font-size: 0.9em;
+	width: 75%;
+	margin: 0 auto;
 }
 
 header a {
@@ -39,7 +43,7 @@ header li {
 	margin-right: 1em;
 }
 header li a:hover {
-	color: blue;
+	background-color: #f7f7f7;
 }
 
 header ul {
