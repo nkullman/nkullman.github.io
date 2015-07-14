@@ -1,4 +1,3 @@
-/* The foundation for the below lifted from http://raw.densitydesign.org/ */
 body {
 	margin: 0;
 	padding: 0;
@@ -18,11 +17,12 @@ header {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	color: #444;
 	border-bottom:1px solid #f7f7f7;
+	text-align: center;
 }
 
 header h1 {
 	float: left;
-	/*font-family: helvetica, arial, sans-serif*/
+	color: inherit;
 }
 
 main {
@@ -30,6 +30,7 @@ main {
 }
 
 header a {
+	color: inherit;
 	text-decoration: none;
 }
 
@@ -45,6 +46,8 @@ header ul {
 	float: right;
 	list-style-type: none;
 	padding-top: 1em;
+	overflow: hidden;
+	text-align: center;
 }
 
 @media only screen and (max-width: 520px) {
