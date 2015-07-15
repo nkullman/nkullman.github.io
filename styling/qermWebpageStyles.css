@@ -33,10 +33,6 @@ nav ul {
     font: bold;
 }
 
-#headline-li{
-    padding-right: 30%;
-}
-
 #headline-li:hover{
     background-color: #f7f7f7;
 }
@@ -87,6 +83,25 @@ footer{
 	position:absolute;
 	bottom:0;
 	left:0;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+
+footer ul{
+    color: #444;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
 }
 
 @media screen and (max-width: 885px) {
