@@ -29,10 +29,10 @@
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li>
-									<a href="#">Research</a>
+									<a href="research.html">Research</a>
 									<ul>
-										<li><a href="left-sidebar.html">Climate change and the Deschutes NF</a></li>
-										<li><a href="#">MOO! The alpha-delta algorithm</a></li>
+										<li><a href="research.html">Climate change and the Deschutes NF</a></li>
+										<li><a href="research.html#alpha-delta">MOO! The alpha-delta algorithm</a></li>
 									</ul>
 								</li>
 								<li class="current">
@@ -61,52 +61,66 @@
 								<article>
 									<header>
 										<h2>Side projects</h2>
-										<p>An incohesive collection</p>
+										<p>A collection of miscellaneous work</p>
 									</header>
 
 									<section id="VaccineEfficacy">
-									<h3>SIEVE</h3>
-									<p>Visualizing vaccine efficacy</p>
-									<span class="image featured"><a href="http://nkullman.github.io/SIEVE/"><img src="images/sieve.png" alt="SIEVE-tool-snapshot" title="Snapshot of SIEVE"/></a></span>
-									<p>For the final project in Jeff Heer's "Data Visualization" class, a couple classmates and I set out to build a tool for HIV researchers at Fred Hutch Cancer Research Center.
-										The result of the project was SIEVE (the <b>S</b>tatistical <b>I</b>nteractive <b>E</b>xplorer of <b>V</b>accine <b>E</b>fficacy).
-									</p>
-									<p>SIEVE is an intereactive visualization for exploring data from vaccine studies. Our aim was to aid the process of sieve analysis, which compares the genetic sequences of viruses found in infected patients between vaccine and placebo groups. The visualization allows researchers in the field to study the affect of a vaccine at the level of the amino acids in the breakthrough viruses and find statistically significant differences in the groups.</p>
-									<p>You can access the tool <a href="http://nkullman.github.io/SIEVE/">here</a>, learn more about it and fork the repository <a href="https://github.com/nkullman/SIEVE">here</a>.</p>
+										<h3>SIEVE<br>
+										<em>Visualizing vaccine efficacy</em></h3>
+										
+										<span class="image featured"><a href="http://nkullman.github.io/SIEVE/"><img src="images/sieve.png" alt="SIEVE-tool-snapshot" title="Snapshot of SIEVE"/></a></span>
+										
+										<p>For the final project in Jeff Heer's "Data Visualization" class, a couple classmates and I set out to build a tool for HIV researchers at Fred Hutch Cancer Research Center.
+											The result of the project was SIEVE (the <b>S</b>tatistical <b>I</b>nteractive <b>E</b>xplorer of <b>V</b>accine <b>E</b>fficacy).</p>
+										
+										<p>SIEVE is an intereactive visualization for exploring data from vaccine studies. Our aim was to aid the process of sieve analysis, which compares the genetic sequences of viruses found in infected patients between vaccine and placebo groups. The visualization allows researchers in the field to study the affect of a vaccine at the level of the amino acids in the breakthrough viruses and find statistically significant differences in the groups.</p>
+										
+										<p>You can access the tool <a href="http://nkullman.github.io/SIEVE/">here</a>, learn more about it and fork the repository <a href="https://github.com/nkullman/SIEVE">here</a>.</p>
 									</section>
 									
 									<section id="FremontBikeViz">
-									<h3>Fremont Bridge bicycle data</h3>
-									<p>Tracking cyclist ridership</p>
-									<span class="image featured"><a href="http://nkullman.github.io/bikedata/"><img src="images/fremontbridgebikecounter.jpg" alt="Fremont-Bridge-Bike-Counter" title="Fremont Bridge bicycle counter"/></a></span>
-									<p>In 2012, Seattle DOT installed bike counters on the Fremont Bridge. Since then, hourly counts of the number of cyclists crossing each side of the bridge have been piling up.
-										Myself and Graham Clenaghan took to visualizing the data. The product is an interactive tool to let you check out bicycle ridership across the bridge as a function of
-										weather, time of day, and day of the week.
-									</p>
-									<p>Access the tool <a href="http://nkullman.github.io/bikedata/">here</a>, learn more about it <a href="https://github.com/nkullman/bikedata">here</a>.</p>
+										<h3>Fremont Bridge bicycle data<br>
+										<em>Tracking cyclist ridership</em></h3>
+										
+										<span class="image featured"><a href="http://nkullman.github.io/bikedata/"><img src="images/fremontbridgebikecounter.jpg" alt="Fremont-Bridge-Bike-Counter" title="Fremont Bridge bicycle counter"/></a></span>
+										
+										<p>In 2012, Seattle DOT installed bike counters on the Fremont Bridge. Since then, hourly counts of the number of cyclists crossing each side of the bridge have been piling up.
+											Myself and Graham Clenaghan took to visualizing the data. The product is an interactive tool to let you check out bicycle ridership across the bridge as a function of
+											weather, time of day, and day of the week.</p>
+										
+										<p>Access the tool <a href="http://nkullman.github.io/bikedata/">here</a>, learn more about it <a href="https://github.com/nkullman/bikedata">here</a>.</p>
 									</section>
 									
 									<section id="FlatRunRoute">
-									<h3>Flat running routes</h3>
-									<p>Finding stress-fracture-friendly ways to stay active</p>
-									<span class="image featured"><img src="images/flatrunroute.png" alt="slopes-in-Seattle" title="Slopes in Seattle"/></span>
-									<p>My wife and I like to run. We don't put in a ton of miles or run at a pace many would find impressive, but it's something we've always done together.</p>
-									<p>For awhile, she was struggling with a stress fracture in her foot. IT seemed to be OK on flat stretches, but when we encountered changes in elevation it would flare up. We needed to find a route that was as flat as possible. Queue optimization!</p>
-									<p>There are techniques in spatial optimization that can lead to a connected solution, minimizing some value. I wanted to see if I could find a route that minimized the change in elevation - in other words, what's the flattest possible route we can run?
-									</p>
-									<p>
-										To craft the problem, we had to specify a few things: a starting and ending point and the desired length of the run (distance). We also needed quite a bit of GIS data, which was all available on Seattle and King County's GIS portal (which is an incredible source of GIS data).
-									</p>
-									<p>Some lines of Python scripts later, the data's ready to go.</p>
-									<p>The starting and ending point was chosen based off where we usually leave for our runs, and we went with a moderate run distance of 5 miles.</p>
-									<p>The optimization model was not trivial (see below). To ensure connectivity and that there were no cycles in our solution, I implemented the directed graph approach of Conrad, et al. (2012).</p>
-									<p>The model's solution indicated that the flattest route of at least the given length was over the J. Coney Connector (the Thomas St. Overpass), and along the water in Centennial Park. The route also begins and ends at Nielsen's Pastries - success!</p>
+										<h3>Flat running routes<br>
+										<em>Finding stress-fracture-friendly ways to stay active</em></h3>
+										
+										<span class="image featured"><img src="images/flatrunroute.png" alt="slopes-in-Seattle" title="Slopes in Seattle"/></span>
+										
+										<p>My wife and I like to run. We don't put in a ton of miles or run at a pace many would find impressive, but it's something we've always done together.</p>
+										
+										<p>For awhile, she was struggling with a stress fracture in her foot. It seemed to be OK on flat stretches, but when we encountered changes in elevation it would flare up. We needed to find a route that was as flat as possible. Queue optimization!</p>
+										
+										<p>There are techniques in spatial optimization that can lead to a connected solution, minimizing some value. I wanted to see if I could find a route that minimized the change in elevation - in other words, what's the flattest possible route we can run?</p>
+										
+										<p>To craft the problem, we had to specify a few things: a starting and ending point and the desired length of the run (distance). We also needed quite a bit of GIS data, which was all available on Seattle and King County's GIS portal (which is an incredible source of GIS data).</p>
+										
+										<p>Some lines of Python scripts later, the data's ready to go.</p>
+										
+										<p>The starting and ending point was chosen based off where we usually leave for our runs, and we went with a moderate run distance of 5 miles.</p>
+										
+										<p>The optimization model was not trivial (see below). To ensure connectivity and that there were no cycles in our solution, I implemented the directed graph approach of Conrad, et al. (2012).</p>
+										
+										<p>The model's solution indicated that the flattest route of at least the given length was over the J. Coney Connector (the Thomas St. Overpass), and along the water in Centennial Park. The route also begins and ends at Nielsen's Pastries - success!</p>
 									</section>
 									
 									<section id="Other1">
-									<h3>Another project. Dad's birthday optimization model?</h3>
-									<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
-									<p>More projects to come...</p>
+										<h3>More projects to come...<br>
+										<em>Just as unrelated as the rest</em></h3>
+										
+										<span class="image featured"><img src="images/bigredbus.jpg" alt="big-red-bus" title="Suggested mode of transit" /></span>
+										
+										<p>Sweet.</p>
 									</section>
 								</article>
 
@@ -139,7 +153,7 @@
 							<section class="6u 12u(narrower)">
 								<h3>In the cockpit</h3>
 								<p> Doesn't qualify as a project, but I flew a plane once. My bucket list grew to include "Get pilot's license" that day.</p>
-								<img height="100%" style="-moz-transform:scale(-1,-1);-webkit-transform:scale(-1,-1);transform:scale(-1,-1);" src="images/inthecockpit.jpg" alt="flying-a-plane" title="In the cockpit">
+								<!--<img width="49%" style="-moz-transform:scale(-1,-1);-webkit-transform:scale(-1,-1);transform:scale(-1,-1);" src="images/inthecockpit.jpg" alt="flying-a-plane" title="In the cockpit">-->
 							</section>
 						</div>
 					</div>
@@ -169,6 +183,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="http://latex.codecogs.com/latexit.js"></script>
 
 	</body>
 </html>
