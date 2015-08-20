@@ -59,14 +59,10 @@
 							<!-- Content -->
 
 								<article>
-									<header>
-										<h2>Side projects</h2>
-										<p>A collection of miscellaneous works</p>
-									</header>
 
 									<section id="VaccineEfficacy">
-										<h3>SIEVE<br>
-										<em>Visualizing vaccine efficacy</em></h3>
+										<h2>SIEVE<br>
+										<em>Visualizing vaccine efficacy</em></h2>
 										
 										<span class="image featured"><a href="http://nkullman.github.io/SIEVE/"><img src="images/sieve.png" alt="SIEVE-tool-snapshot" title="Snapshot of SIEVE"/></a></span>
 										
@@ -75,52 +71,51 @@
 										
 										<p>SIEVE is an intereactive visualization for exploring data from vaccine studies. Our aim was to aid the process of sieve analysis, which compares the genetic sequences of viruses found in infected patients between vaccine and placebo groups. The visualization allows researchers in the field to study the affect of a vaccine at the level of the amino acids in the breakthrough viruses and find statistically significant differences in the groups.</p>
 										
-										<p>You can access the tool <a href="http://nkullman.github.io/SIEVE/">here</a>, learn more about it and fork the repository <a href="https://github.com/nkullman/SIEVE">here</a>.</p>
+										<p><a href="http://nkullman.github.io/SIEVE/">Access the tool</a> | <a href="https://github.com/nkullman/SIEVE">Source code</a></p>
 									</section>
 									
 									<section id="FremontBikeViz">
-										<h3>Fremont Bridge bicycle data<br>
-										<em>Tracking cyclist ridership</em></h3>
+										<h2>Fremont Bridge bicycle data<br>
+										<em>Tracking cyclist ridership</em></h2>
 										
 										<span class="image featured"><a href="http://nkullman.github.io/bikedata/"><img src="images/fremontbridgebikecounter.jpg" alt="Fremont-Bridge-Bike-Counter" title="Fremont Bridge bicycle counter"/></a></span>
 										
 										<p>In 2012, Seattle DOT installed bike counters on the Fremont Bridge. Since then, hourly counts of the number of cyclists crossing each side of the bridge have been piling up.
-											Myself and Graham Clenaghan took to visualizing the data. The product is an interactive tool to let you check out bicycle ridership across the bridge as a function of
-											weather, time of day, and day of the week.</p>
+											Myself and Graham Clenaghan took to visualizing the data. We created an interactive tool to let you check out bicycle ridership across the bridge as a function of things like
+											weather, time of the day, and time of the year.</p>
 										
-										<p>Access the tool <a href="http://nkullman.github.io/bikedata/">here</a>, learn more about it <a href="https://github.com/nkullman/bikedata">here</a>.</p>
+										<p><a href="http://nkullman.github.io/bikedata/">Access the tool</a> | <a href="https://github.com/nkullman/bikedata">Source code</a>.</p>
 									</section>
 									
 									<section id="FlatRunRoute">
-										<h3>Flat running routes<br>
-										<em>Finding stress-fracture-friendly ways to stay active</em></h3>
+										<h2>Flat running routes<br>
+										<em>Finding stress-fracture-friendly ways to stay active</em></h2>
 										
-										<span class="image featured"><img src="images/flatrunroute.png" alt="slopes-in-Seattle" title="Slopes in Seattle"/></span>
+										<span class="image featured"><img src="images/pidaydash.jpg" alt="slopes-in-Seattle" title="From the most epic Pi Day of the century: 3/14/15"/>
+										From the Pi Day Dash on the most epic Pi Day of the century: 3/14/15. My wife and I met as undergraduates founding the Math Club ('09 club t-shirts on display in the image). How could we miss this opportunity?</span>
 										
 										<p>My wife and I like to run. We don't put in a ton of miles or run at a pace many would find impressive, but it's something we've always done together.</p>
 										
-										<p>For awhile, she was struggling with a stress fracture in her foot. It seemed to be OK on flat stretches, but when we encountered changes in elevation it would flare up. We needed to find a route that was as flat as possible.</p>
+										<p>For awhile she was struggling with a stress fracture in her foot, which seemed to tolerate running on flat ground but would flare up when we encountered changes in elevation.
+											I decided to take the opportunity to demonstrate the breadth of problems that optimization can tackle while hopefully improving her health at the same time.</p>
+																					
+										<p>I downloaded a shapefile with the network of streets in Seattle and a DEM of the city. After using the DEM to compute mean street slopes, I had all the data necessary to build a model to determine the flattest possible running route.</p>
 										
-										<p>There are techniques in spatial optimization that can lead to a connected solution, minimizing some value. I wanted to see if I could find a route that minimized the change in elevation - in other words, what's the flattest possible route we can run?</p>
+										<p>The final model can be seen here. I used the approach in Conrad et al. (2012) to ensure connectivity and eliminate cycling.</p>
 										
-										<p>To craft the problem, we had to specify a few things: a starting and ending point and the desired length of the run (distance). We also needed quite a bit of GIS data, which was all available on Seattle and King County's GIS portal (which is an incredible source of GIS data).</p>
+										<p>I solved the model in CPLEX, and the results pointed to the waterfront trail through Myrtle Edwards and Centennial Park, which is indeed quite flat.</p>
 										
-										<p>Some lines of Python scripts later, the data's ready to go.</p>
-										
-										<p>The starting and ending point was chosen based off where we usually leave for our runs, and we went with a moderate run distance of 5 miles.</p>
-										
-										<p>The optimization model was not trivial (see below). To ensure connectivity and that there were no cycles in our solution, I implemented the directed graph approach of Conrad, et al. (2012).</p>
-										
-										<p>The model's solution indicated that the flattest route of at least the given length was over the J. Coney Connector (the Thomas St. Overpass), and along the water in Centennial Park. The route also begins and ends at Nielsen's Pastries - success!</p>
+										<p>In the end I couldn't say that this exercise helped solve the issues of the stress fracture. The healing required more than a change in run routes.
+											But the model worked, and the solution points to a route that terminates at a Danish pastry shop, so I think it still qualifies as a win!</p>
 									</section>
 									
-									<section id="Other1">
-										<h3>More projects to come...<br>
-										<em>Just as unrelated as the rest</em></h3>
+									<!--<section id="Other1">
+										<h2>More projects to come...<br>
+										<em>Just as unrelated as the rest</em></h2>
 										
 										<span class="image featured"><img src="images/bigredbus.jpg" alt="big-red-bus" title="Suggested mode of transit" /></span>
 										
-										<p>Sweet.</p>
+										<p>Sweet.</p>->
 									</section>
 								</article>
 
@@ -143,7 +138,7 @@
 							</section>
 							<section class="3u 6u$(narrower) 12u$(mobilep)">
 								<h3>Other links of interest</h3>
-								<ul class="links">
+								<ul class="links"> <!-- here: Seattle and King county GIS databases, big red bus, sieve analysis or vaccine efficacy, fremont bridge bike data, CPLEX -->
 									<li><a href="https://www.fredhutch.org/en.html">Fred Hutch</a></li>
 									<li><a href="http://www.seattle.gov/transportation/parklets.htm">Parklets and Streateries</a></li>
 									<li><a href="http://www.wsdot.wa.gov/projects/viaduct">Viaduct/SR99/Aurora project</a></li>
