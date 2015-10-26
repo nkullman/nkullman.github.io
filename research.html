@@ -145,21 +145,20 @@
 											<span class="image featured"><img src="images/sanjuanriver.jpg" alt="" /></span>
 
 											<p>The alpha-delta algorithm is in the family of methods used to find Pareto efficient solutions to multi-objective optimization models.
-												(Others in this family include the epsilon-constraint method and weighted sums.)
-												The first work I did with Sandor Toth was writing an implementation of the alpha-delta algorithm.
+												(Others in this family include the epsilon-constraint method and weighted sums.) In short, the algorithm finds optimal solutions by iteratively slicing the solution space with a tilted hyperplane.</p>
+												<p>The first work I did with Sándor Tóth was writing an implementation of the alpha-delta algorithm in Java using CPLEX's Concert Technology.
 												Given a CPLEX model file and a couple of parameters, it finds the Pareto frontier of your multi-objective LP or MIP model file.</p>
-											<p>I will use it to solve my own model files in the near future, but others have already put it to use.
+											<p>I am currently using it to solve my own model files (check back soon for results), but others researchers have also put it to use.
 												Below are short descriptions of a few projects whose models have been solved with the program recently.</p>
 
 											<h3>Water allocation in the San Juan River <em>Will Chen</em></h3>
 											<p>Fellow QERMie Will Chen is studying how water management at the dam on the San Juan River impacts fish populations in the river and water supplies for downstream communities.</p>
-											<p>His model minimizes water shortage and nonnative fish populations while maximizing native fish populations.
-												Results are not out yet, but you can see his complete model here (<em>link coming soon</em>).</p>
+											<p>His model minimizes water shortage and nonnative fish populations while maximizing native fish populations.</p>
 												
 											<h3>Ecological restoration in Chile <em>Trevor Walter</em></h3>
 											<p>UW SEFS alumni Trevor Walter is working with the Nature Conservancy to determine the best means of ecological restoration in a Chilean reserve that is marbled with nonnative eucalyptus plantations.</p>
 											<p>Trevor is seeking a means to restore the plantations to native forest cover while maximizing revenue and promoting community engagement via employment in the restoration activities.
-												We are looking to publish the work soon, so stay tuned for a link to the article. In the meantime, you should check out the model (<em>link coming soon</em>).
+												We are looking to publish the work soon, so stay tuned for a link to the article. In the meantime, you should check out the model (<em>coming soon</em>).
 											</p>
 											
 											<!--<h3>Reducing fire hazard in the Deschutes National Forest <em>Svetlana Kushch Schroder</em></h3>
@@ -171,8 +170,8 @@
 											<h3>Alpha-delta under construction</h3>
 											<p>A redesign of the alpha-delta method is underway.
 												You can check on the progress at the <a href="https://github.com/nkullman/AlphaDelta">alpha-delta GitHub page</a>.
-												Until the redesign is complete, the original implementation will still be in use. It was not hosted publicly, but I am happy to share it.
-												Interested in using it for your model? <a href="mailto:nick.kullman@gmail.com">Send me an email</a></p>
+												Until the redesign is complete, the original implementation is still in use. It is not hosted publicly, but I am happy to share it.
+												Interested in using it for your model or seeing the source code? <a href="mailto:nick.kullman@gmail.com">Send me an email</a></p>
 											
 										</article>
 
@@ -184,7 +183,7 @@
 									<!-- Sidebar -->
 
 										<section>
-											<h3>Methods of multi-objective optimization</h3>
+											<h3>Solution methods for multi-objective optimization</h3>
 											<p>Looking for more info on how we solve our models? <a href="research.html#alpha-delta">Jump to the section below on the alpha-delta method</a>. Really want to see more? Check out the implementation on GitHub</p>
 											<footer>
 												<a href="https://github.com/nkullman/AlphaDelta" class="button">Alpha-delta on GitHub</a>
@@ -216,16 +215,15 @@
 								<ul class="links">
 									<li><a href="http://www.fs.usda.gov/main/deschutes/home">Deschutes NF</a></li>
 									<li><a href="http://www.ipcc.ch/report/ar5/syr/">Climate change</a></li>
-									<li><a href="https://en.wikipedia.org/wiki/San_Juan_River_(Colorado_River)">San Juan River</a></li>
+									<li><a href="https://en.wikipedia.org/wiki/Multi-objective_optimization">Multi-objective optimization</a></li>
 									<li><a href="http://www.nature.org/">The Nature Conservancy</a></li>
 								</ul>
 							</section>
 							<section class="6u 12u(narrower)">
 								<h3>Read on...</h3>
-								<p>I also recently started working with folks at the Chugach National Forest.
-									Not exactly sure where the study is headed yet, but we are excited!
-									Check back soon for updates</p>
-								<p>The others in our spatial optimization lab include <a href="http://students.washington.edu/kaiross/">Kai Ross</a> and Rachel St. John.
+								<p>I also recently started working with folks at the Chugach National Forest alongside labmate Svetlana Schroder.
+									We are still investigating the study area to determine objectives and are excited about the upcoming project.
+									Check back soon for updates...
 								</p>
 											
 							</section>
