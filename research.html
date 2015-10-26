@@ -9,6 +9,10 @@
 		<title>N Kullman | Research</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
 		<meta name="description" content="Studying how climate change affects the Deschutes National Forest and helping researchers find Pareto frontiers for their multi-objective optimization models">
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/fonts/academicons.css" />
@@ -108,7 +112,30 @@
 											<p>We are working with the Forest Service to answer these questions.
 												Under a few of the key climate change scenarios, we will determine the optimal management strategy for reducing fire hazard in the Deschutes National Forest
 												while maximizing northern spotted owl habitat and preserving watershed health.</p>
-											<p>See the optimization model here (<em>link coming soon</em>).</p>
+									
+											<button data-toggle="collapse" data-target="#deschutesOptModel" style="cursor:pointer">See the optimization model.</button>
+												<div id="deschutesOptModel" class="collapse">
+													<p>The problem is multi-objective, so we have the following objective functions representing the minimization of fire hazard, the maximization of northern spotted owl habitat, and minimization of sediment delivery: </p> 
+													<span lang="latex">Minimize \quad \sum_{i\in I,r\in R} F_{i,r} x_{i,r}</span><br>
+													<span lang="latex">Maximize \quad \sum_{i\in I_\omega} \left(a_i p_i + e a_i \left( \sum_{j \in R_i} x_{i,j}-p_i \right) \right)</span><br>
+													<span lang="latex">Minimize \quad \max_t \{S_t\}</span>
+													
+													<p> Subject to the following constraints: </p>
+													<span lang="latex">\sum_{i\inI,r\inR} s_{i,r,t} x_{i,r} = S_t \qquad \forall t \in T</span><br>
+													<span lang="latex">\sum_{i \in D_c, j \in R_i} x_{i,j} - |c| q_c \ge 0 \qquad \forall c \in C</span><br>
+													<span lang="latex">\sum_{c\in C_i} q_c - p_i \ge 0 \qquad \forall i \in I_\omega</span><br>
+													<span lang="latex">\sum_{r∈R} x_{i,r} = 1  \qquad \forall i \in I</span><br>
+													<span lang="latex">\sum_{i \in I,r \in 1,3} a_i x_{i,r} = H_1 </span><br>
+													<span lang="latex">\sum_{i \in I,r \in 2,3} a_i x_{i,r} = H_2</span><br>
+													<span lang="latex">H_1 \le A</span><br>
+													<span lang="latex">H_2 \le A</span><br>
+													<span lang="latex">\ell H_1 - H_2 \le 0</span><br>
+													<span lang="latex">-u H_1 + H_2 \le 0</span><br>
+													<span lang="latex">x_{i,r}, p_i, q_c \in \{0,1\} \quad \forall i \in I, r \in R, c \in C</span>
+													
+													<p>The model above is provided mostly without context. If you're interested in learning more, please <a href="mailto:nick.kullman@gmail.com">email me</a>.</p>
+													
+												</div>
 												
 											<header id="alpha-delta">
 												<h2>Multi-objective optimization</h2>
