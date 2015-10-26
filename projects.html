@@ -95,7 +95,7 @@
 										<span class="image featured"><a href="http://nkullman.github.io/bikedata/"><img src="images/fremontbridgebikecounter.jpg" alt="Fremont-Bridge-Bike-Counter" title="Fremont Bridge bicycle counter"/></a><span style="font-size:.75em;"><em>Image credit: Seattle PI</em></span></span>
 										
 										<p>In 2012, Seattle DOT installed bike counters on the Fremont Bridge. Since then, hourly counts of the number of cyclists crossing each side of the bridge have been piling up.
-											Graham Clenaghan and I took to visualizing the data. We created an interactive tool to let you explore bicycle ridership across the bridge as a function of things like
+											Graham Clenaghan and I took to visualizing the data. We created a simple interactive tool to let you explore bicycle ridership across the bridge as a function of parameters like
 											weather, time of the day, and time of the year.</p>
 										
 										<p><a href="http://nkullman.github.io/bikedata/">Access the tool</a> | <a href="https://github.com/nkullman/bikedata">Source code</a>.</p>
@@ -103,23 +103,21 @@
 									
 									<section id="FlatRunRoute">
 										<h2>Flat running routes<br>
-										<em>Finding stress-fracture-friendly ways to stay active</em></h2>
+										<em>Finding stress-fracture-friendly ways to stay active using optimization</em></h2>
 										
 										<span class="image featured"><img src="images/pidaydash.jpg" alt="slopes-in-Seattle" title="From the most epic Pi Day of the century: 3/14/15"/>
-										From the Pi Day Dash on the most epic Pi Day of the century: 3/14/15. My wife and I met as undergraduates founding the Math Club ('09 club t-shirts on display in the image). How could we miss this opportunity? <span style="font-size:.75em;"><em>Image credit: Seattle PI</em></span></span>
+										From the Pi Day Dash on the most epic Pi Day of the century: 3/14/15. My wife and I met as undergraduates founding the Math Club ('09 club t-shirts on display in the image). How could we miss this opportunity? <span style="font-size:.75em;"><em>(Image credit: Seattle PI)</em></span></span>
 										
 										<p>My wife and I like to run. We don't put in a ton of miles or run at a pace many would find impressive, but it is something we have always done together.</p>
 										
 										<p>For awhile she was struggling with a stress fracture in her foot, which seemed to tolerate running on flat ground but would flare up when we encountered changes in elevation.
 											I decided to take the opportunity to demonstrate the breadth of problems that optimization can tackle while hopefully improving her health at the same time.</p>
 																					
-										<p>I downloaded a shapefile with the network of streets in Seattle and a DEM of the city. After using the DEM to compute mean street slopes, I had all the data necessary to build a model to determine the flattest possible running route.</p>
+										<p>King County and the city of Seattle have an excellent <a href="http://www5.kingcounty.gov/gisdataportal/">GIS data portal</a> from which I was able to download a DEM for the city and a shapefile with the network of streets. Coupled together with a little computation in GIS, they offer the mean slopes for every street.</p>
 										
-										<p>The final model can be seen here (<em>link coming soon</em>). I used the approach in Conrad et al. (2012) to ensure connectivity and eliminate cycling.</p>
+										<p>The optimization model minimized the cumulative sum of the slopes selected to be part of our running route (the final model will be posted below shortly). To eliminate cycling and ensure connectivity, I drew from the approach in Conrad et al. (2012). The solution pointed to a route through Myrtle Edwards and Centennial Park, which is indeed quite flat.</p>
 										
-										<p>I solved the model in CPLEX, and the results pointed to the waterfront trail through Myrtle Edwards and Centennial Park, which is indeed quite flat.</p>
-										
-										<p>In the this exercise did not help solve the issues of the stress fracture. The healing required more than a change in run routes.
+										<p>In the end, this exercise did not help solve the issues of the stress fracture. That happened with rest and physical therapy rather than a change in run routes.
 											But the model worked, and the solution points to a route that terminates at a Danish pastry shop, so I think it still qualifies as a win!</p>
 									</section>
 									
@@ -155,7 +153,7 @@
 							</section>
 							<section class="6u 12u(narrower)">
 								<h3>Read on...</h3>
-								<p> Not a project, but I flew a plane once. My bucket list grew to include "Get pilot's license" that day.</p>
+								<p> If you're interested in seeing more visualizations, check out the tool currently under devlopment for visualizing the results to our multi-objective studies (<a href="nkullman.github.io/DeschutesNF">available here</a>). The data are recent results of my research in the Deschutes National Forest. You can find more details of that work on my <a href="research.html">reserach page</a>.</p>
 							</section>
 						</div>
 					</div>
