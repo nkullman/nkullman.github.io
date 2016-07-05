@@ -106,7 +106,7 @@
 										<p>For the final project in Jeff Heer's "Data Visualization" class, a couple of classmates and I built a tool for HIV researchers at Fred Hutch Research Center.
 											The result of the project was SIEVE (<b>S</b>tatistical <b>I</b>nteractive <b>E</b>xplorer of <b>V</b>accine <b>E</b>fficacy).</p>
 										
-										<p>SIEVE is an intereactive visualization for exploring breakthrough sequence data from vaccine efficacy trials. Specifically, SIEVE aids the process of "sieve analysis", which compares the genetic sequences of viruses isolated from infected vaccine versus placebo recipients. The visualization allows researchers to study the effect of the vaccine at the level of amino acids in the breakthrough viruses and find statistically significant differences in the groups.</p>
+										<p>SIEVE is an interactive visualization for exploring breakthrough sequence data from vaccine efficacy trials. Specifically, SIEVE aids the process of "sieve analysis", which compares the genetic sequences of viruses isolated from infected vaccine versus placebo recipients. The visualization allows researchers to study the effect of the vaccine at the level of amino acids in the breakthrough viruses and find statistically significant differences in the groups.</p>
 										
 										<p><em>New!</em> SIEVE has a new home at Fred Hutch: <a href="http://sieve.fredhutch.org/viz">see it here</a>. We also recently added many more datasets to SIEVE, making it not only a powerful visualization and analysis tool but also a unique source for consolidated sieve analysis studies.</p>
 										
@@ -133,17 +133,9 @@
 										<span class="image featured"><img style="width:50%" src="images/pidaydash.jpg" alt="slopes-in-Seattle" title="From the most epic Pi Day of the century: 3/14/15"/>
 										From the Pi Day Dash on the most epic Pi Day of the century: 3/14/15. My wife and I met as undergraduates founding the Math Club ('09 club t-shirts on display in the image). How could we miss this opportunity? <span style="font-size:.75em;"><em>(Image credit: Seattle PI)</em></span></span>
 										
-										<p>My wife and I like to run. We don't put in a ton of miles or run at a pace many would find impressive, but it is something we have always done together.</p>
+										<p>A stress fracture threatened to sideline my wife from running, but we found that running on flat ground seemed to keep the pain at bay. Unfortunately, finding a flat route in Seattle can be quite a challenge! But using the Seattle GIS data portal, I was able to determine the average slope of all streets and trails in the city. I used that data to parameterize an optimization model to find a connected route with minimal elevation gain.</p>
 										
-										<p>For awhile she was struggling with a stress fracture in her foot, which seemed to tolerate running on flat ground but would flare up when we encountered changes in elevation.
-											I decided to take the opportunity to demonstrate the breadth of problems that optimization can tackle while hopefully improving her health at the same time.</p>
-																					
-										<p>King County and the city of Seattle have an excellent <a href="http://www5.kingcounty.gov/gisdataportal/">GIS data portal</a> from which I was able to download a DEM for the city and a shapefile with the network of streets. Coupled together with a little computation in GIS, they offer the mean slopes for every street.</p>
-										
-										<p>The optimization model minimized the cumulative sum of the slopes selected to be part of our running route (the final model will be posted below shortly). To eliminate cycling and ensure connectivity, I drew from the approach in Conrad et al. (2012). The solution pointed to a route through Myrtle Edwards and Centennial Park, which is indeed quite flat.</p>
-										
-										<p>In the end, this exercise did not help solve the issues of the stress fracture. That happened with rest and physical therapy rather than a change in run routes.
-											But the model worked, and the solution points to a route that terminates at a Danish pastry shop, so I think it still qualifies as a win!</p>
+										<p>The end result: a route connecting the Elliot Bay Trail (flat, since it hugs the Sound) and Gilman Ave W (relatively flat, since it hugs train tracks).</p>
 									</section>
 									
 								</article>
@@ -170,15 +162,15 @@
 							<section class="3u 6u$(narrower) 12u$(mobilep)">
 								<h3>Project-related links</h3>
 								<ul class="links">
+									<li><a href="http://www.e-vro.info/">e-VRO</a></li>
 									<li><a href="https://www.fredhutch.org/en.html">Fred Hutch</a></li>
 									<li><a href="https://data.seattle.gov/Transportation/Fremont-Bridge-Hourly-Bicycle-Counts-by-Month-Octo/65db-xm6k">Fremont Bridge bike data</a></li>
 									<li><a href="https://data.seattle.gov/dataset/data-seattle-gov-GIS-shapefile-datasets/f7tb-rnup">Seattle GIS data</a></li>
-									<li><a href="https://faculty.washington.edu/toths/Presentations/Lecture%208/Conrad_et_al_2012.pdf">Conrad et al. (2012)</a></li>
 								</ul>
 							</section>
 							<section class="6u 12u(narrower)">
 								<h3>Read on...</h3>
-								<p> If you're interested in seeing more visualizations, check out the tool currently under devlopment for visualizing the results to our multi-objective studies (<a href="nkullman.github.io/DeschutesNF">available here</a>). The data are recent results of my research in the Deschutes National Forest. You can find more details of that work on my <a href="research.html">reserach page</a>.</p>
+								<p> If you're interested in seeing more visualizations, check out the tool currently under devlopment for visualizing the results to our multi-objective studies (<a href="nkullman.github.io/DeschutesNF">available here</a>). The data are recent results of my research in the Deschutes National Forest. You can find more details of that work on my <a href="research.html">research page</a>.</p>
 							</section>
 						</div>
 					</div>
