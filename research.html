@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-	<meta name="description" content="Studying how climate change affects the Deschutes National Forest and helping researchers find Pareto frontiers for their multi-objective optimization models">
+	<meta name="description" content="Research | Finding Pareto optimal frontiers, quantifying conflict among objectives, and how climate change impacts forest management.">
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/fonts/academicons.css" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,8 +42,10 @@
 					<li class="current">
 						<a href="research.html">Research</a>
 						<ul>
-							<li><a href="research.html">Climate change and the Deschutes NF</a></li>
-							<li><a href="research.html#alpha-delta">Multi-objective optimization</a></li>
+							<li class="divider">Optimization and...</li>
+							<li><a href="research.html#deschutes">Climate change in the Deschutes NF</a></li>
+							<li><a href="research.html#chugach">Reducing HBI in the Chugach NF</a></li>
+							<li><a href="research.html#alpha-delta">The Alpha-Delta Algorithm</a></li>
 						</ul>
 					</li>
 					<li>
@@ -75,114 +76,96 @@
 							<!-- Content -->
 
 							<article>
-								<header id="deschutes">
-									<h2>Climate Change and the Deschutes National Forest</h2>
-									<p>Seeking optimality in the face of uncertainty</p>
-								</header>
+								<header>
+									<h2>Research <br><em>Multi-objective optimization</em></h2>
+									<p>
+										My research surrounds multi-objective optimization: developing models and the software to solve them and analyze the results.
+										For my masters thesis, I am using optimization to study forest ecosystem services and their response to climate
+										change. Read on to learn more.
+									</p>
 
-								<span class="image featured">
+								</header>
+								<section id="deschutes">
+									<h3>Climate Change and the Deschutes National Forest</h3>
+									<span class="image featured">
 												<figure>
 													<img src="images/deschutesNF.png" alt="" />
 													<figcaption>Image credit: Stephen Fitzgerald</figcaption>
 												</figure>
 											</span>
+									<p>The Deschutes National Forest offers recreation, clean air, carbon storage, wildlife habitat, clean water, and countless
+										other services. But it is also a severe wildfire waiting to happen, and climate change is not expected to improve
+										matters. The Forest Service wants to curb this risk through fuels removal, but what schedule of treatments is most
+										effective in consideration of climate uncertainties and with minimal impact to the forest and its provision of
+										services? How does the answer change if we vary our assumption of climate change intensity?
+									</p>
 
-								<p>The Deschutes National Forest offers recreation, clean air, carbon storage, wildlife habitat, clean water, and countless
-									other services. But it is also a severe wildfire waiting to happen and climate change is not expected to improve
-									matters. The Forest Service wants to curb this risk through fuels removal, but what schedule of treatments is most
-									effective in consideration of climate uncertainties and with minimal impact to the forest and its provision of services?
-								</p>
+									<h4>Forests and climate change</h4>
+									<p>Similar to all other ecosystems, forests are predicted to undergo complex changes as a result of the changing climate.
+										A few of the changes include new spatial distributions of tree species, increased sediment delivery to streams,
+										and increasing disturbance regimes such as wildfires, drought, and insect infestation. As this transformation occurs,
+										forests’ ability to provide ecosystem services will change. For instance, increased frequency of wildfires will
+										decrease forests’ ability to store carbon and provide habitat for wildlife. Increased sediment runoff to streams
+										will hinder the ability to provide adequate water supplies to population centers.</p>
+									<p>To mitigate the undesired changes, our management of forests must evolve alongside climate. What once were optimal
+										practices may no longer be so. Without proper correction we will be managing forests in a way that restricts their
+										potential.
+									</p>
+									<p>To determine new management practices we must first understand how climate change will impact forests’ ability to
+										provide ecosystem services. How many tons of carbon dioxide will the forest be capable of storing? How many acres
+										of forest will still qualify as suitable habitat for a particular species? Because forests provide these ecosystem
+										services in concert with one another, we must also understand how climate impacts the trade-offs that exist among
+										them. When we look at the simultaneous provision of wildlife habitat, carbon storage, and resistance to wildfire,
+										how does an increase in any one service alter our ability to acquire an amount of another? And how do these trade-offs
+										change as a function of climate?</p>
+									<p>We are working with the Forest Service to answer these questions. Under a few climate change scenarios, we will
+										determine the optimal management strategy for reducing fire hazard in the Deschutes National Forest while maximizing
+										northern spotted owl habitat and preserving watershed health.</p>
+								</section>
+								<section id="chugach">
+									<h3>A single-objective model for HBI reduction in the Chugach National Forest</h3>
+									<p>
+										Our lab also recently started a project with folks in the Chugach National Forest. The objective is to reduce human-bear
+										interactions (HBI) near their world class sockeye salmon fishery that draws more than 70,000 anglers over the course
+										of a summer. The project is still in its early phases, so check back as we continue to develop the model.
+									</p>
+									<span class="image featured">
+												<figure>
+													<img src="images/russianRiverSockeyeRun.jpg" alt="Fishing the Russian River." />
+													<figcaption>Sockeye fishing at the Russian River in the Chugach National Forest. <em>Image credit: https://thekenai.wordpress.com/</em></figcaption>
+												</figure>
+											</span>
+								</section>
+								<section id="alpha-delta">
+									<h3>Solving models with the Alpha-Delta algorithm</h3>
+									<p>The alpha-delta algorithm is in the family of methods used to find Pareto efficient solutions to multi-objective
+										optimization models. (Others in this family include the epsilon-constraint method and weighted sums.) The algorithm
+										finds optimal solutions by iteratively slicing the solution space with a tilted hyperplane.</p>
+									<p>Early in my QERM career, I wrote an implementation of the alpha-delta algorithm using the Concert Technology Java
+										API for IBM's CPLEX optimization engine. Given a model file and a couple of parameters, it finds the model's
+										Pareto frontier.
+									</p>
+									<p>A few researchers beyond our lab have put it to use. Below are short descriptions of some of the projects whose
+										models have been solved with the program.</p>
+									<span class="image featured">
+												<figure>
+													<img src="images/sanjuanriver.jpg" alt="The San Juan River seen at Goosenecks State Park." />
+													<figcaption>The San Juan River</figcaption>
+												</figure>
+											</span>
 
-								<h3>Forests and climate change</h3>
-								<p>Similar to all other ecosystems, forests are predicted to undergo complex changes as a result of the changing climate.
-									A few of the changes include new spatial distributions of tree species, increased sediment delivery to streams,
-									and increasing disturbance regimes such as wildfires, drought, and insect infestation. As this transformation occurs,
-									forests’ ability to provide ecosystem services will change. For instance, increased frequency of wildfires will
-									decrease forests’ ability to store carbon and provide habitat for wildlife. Increased sediment runoff to streams
-									will hinder the ability to provide adequate water supplies to population centers.</p>
-								<p>To mitigate the undesired changes, our management of forests must evolve alongside climate. What once were optimal
-									practices will no longer be so. Without proper correction we will be managing forests in a way that restricts their
-									potential.
-								</p>
-								<p>To determine new management practices we must first understand how climate change will impact forests’ ability to
-									provide ecosystem services. How many tons of carbon dioxide will the forest be capable of storing? How many acres
-									of forest will still qualify as suitable habitat for a particular species? Because forests provide these ecosystem
-									services in concert with one another, we must also understand how climate impacts the tradeoffs that exist between
-									them. When we look at the simultaneous provision of wildlife habitat, carbon storage, and resistance to wildfire,
-									how does an increase in any one service alter our ability to acquire an amount of another? And how do these tradeoffs
-									change as a function of climate?</p>
-								<p>We are working with the Forest Service to answer these questions. Under a few of the key climate change scenarios,
-									we will determine the optimal management strategy for reducing fire hazard in the Deschutes National Forest while
-									maximizing northern spotted owl habitat and preserving watershed health.</p>
+									<h4>Water allocation in the San Juan River <em>Will Chen</em></h4>
+									<p>Fellow QERMie <a href="https://mathecology.wordpress.com/">Will Chen</a> is studying how water management at the
+										dam on the San Juan River impacts fish populations in the river and water supplies for downstream communities.</p>
+									<p>His model minimizes water shortage and nonnative fish populations while maximizing native fish populations.</p>
 
-								<button data-toggle="collapse" data-target="#deschutesOptModel" style="cursor:pointer">See the optimization model.</button>
-								<div id="deschutesOptModel" class="collapse">
-									<p>The problem is multi-objective, so we have the following objective functions representing the minimization of fire
-										hazard, the maximization of northern spotted owl habitat, and minimization of sediment delivery: </p>
-									<span lang="latex">Minimize \quad \sum_{i\in I,r\in R} F_{i,r} x_{i,r}</span><br>
-									<span lang="latex">Maximize \quad \sum_{i\in I_\omega} \left(a_i p_i + e a_i \left( \sum_{j \in R_i} x_{i,j}-p_i \right) \right)</span><br>
-									<span lang="latex">Minimize \quad \max_t \{S_t\}</span>
-
-									<p> Subject to the following constraints: </p>
-									<span lang="latex">\sum_{i\inI,r\inR} s_{i,r,t} x_{i,r} = S_t \qquad \forall t \in T</span><br>
-									<span lang="latex">\sum_{i \in D_c, j \in R_i} x_{i,j} - |c| q_c \ge 0 \qquad \forall c \in C</span><br>
-									<span lang="latex">\sum_{c\in C_i} q_c - p_i \ge 0 \qquad \forall i \in I_\omega</span><br>
-									<span lang="latex">\sum_{r∈R} x_{i,r} = 1  \qquad \forall i \in I</span><br>
-									<span lang="latex">\sum_{i \in I,r \in 1,3} a_i x_{i,r} = H_1 </span><br>
-									<span lang="latex">\sum_{i \in I,r \in 2,3} a_i x_{i,r} = H_2</span><br>
-									<span lang="latex">H_1 \le A</span><br>
-									<span lang="latex">H_2 \le A</span><br>
-									<span lang="latex">\ell H_1 - H_2 \le 0</span><br>
-									<span lang="latex">-u H_1 + H_2 \le 0</span><br>
-									<span lang="latex">x_{i,r}, p_i, q_c \in \{0,1\} \quad \forall i \in I, r \in R, c \in C</span>
-
-									<p>The model above is provided mostly without context. If you're interested in learning more, please <a href="mailto:nick.kullman@gmail.com">email me</a>.</p>
-
-								</div>
-
-								<p>I recently began building a visualization tool for our results. Forgive the formatting - development is still underway,
-									but do <a href="nkullman.github.io/DeschutesNF">check it out</a>.</p>
-
-								<header id="alpha-delta">
-									<h2>Multi-objective optimization</h2>
-									<p>Applications of the alpha-delta algorithm</p>
-								</header>
-
-								<span class="image featured"><img src="images/sanjuanriver.jpg" alt="" /></span>
-
-								<p>The alpha-delta algorithm is in the family of methods used to find Pareto efficient solutions to multi-objective
-									optimization models. (Others in this family include the epsilon-constraint method and weighted sums.) In short,
-									the algorithm finds optimal solutions by iteratively slicing the solution space with a tilted hyperplane.</p>
-								<p>The first work I did with Sándor Tóth was writing an implementation of the alpha-delta algorithm in Java using CPLEX's
-									Concert Technology. Given a CPLEX model file and a couple of parameters, it finds the Pareto frontier of your multi-objective
-									LP or MIP model file.</p>
-								<p>I am currently using it to solve my own model files (check back soon for results), but others researchers have also
-									put it to use. Below are short descriptions of a few projects whose models have been solved with the program recently.</p>
-
-								<h3>Water allocation in the San Juan River <em>Will Chen</em></h3>
-								<p>Fellow QERMie Will Chen is studying how water management at the dam on the San Juan River impacts fish populations
-									in the river and water supplies for downstream communities.</p>
-								<p>His model minimizes water shortage and nonnative fish populations while maximizing native fish populations.</p>
-
-								<h3>Ecological restoration in Chile <em>Trevor Walter</em></h3>
-								<p>UW SEFS alumni Trevor Walter is working with the Nature Conservancy to determine the best means of ecological restoration
-									in a Chilean reserve that is marbled with nonnative eucalyptus plantations.</p>
-								<p>Trevor is seeking a means to restore the plantations to native forest cover while maximizing revenue and promoting
-									community engagement via employment in the restoration activities. We are looking to publish the work soon, so stay
-									tuned for a link to the article. In the meantime, you should check out the model (<em>coming soon</em>).
-								</p>
-
-								<!--<h3>Reducing fire hazard in the Deschutes National Forest <em>Svetlana Kushch Schroder</em></h3>
-											<p>Before I started working on curbing the fire hazard of the Deschutes National Forest, labmate Svetlana Kushch Schroder was working on it.</p>
-											<p>With the US Forest Service, she established the primary objectives of protecting northern spotted owls, reducing fire hazard, and minimizing sediment delivery to the watersheds.
-												This work (and more) can be seen in her dissertation (<em>link coming soon</em>), but the model alone can be found here (<em>link coming soon</em>).
-											</p> -->
-
-								<h3>Alpha-delta under construction</h3>
-								<p>A redesign of the alpha-delta method is underway. You can check on the progress at the <a href="https://github.com/nkullman/AlphaDelta">alpha-delta GitHub page</a>.
-									Until the redesign is complete, the original implementation is still in use. It is not hosted publicly, but I am
-									happy to share it. Interested in using it for your model or seeing the source code? <a href="mailto:nick.kullman@gmail.com">Send me an email</a></p>
-
+									<h4>Ecological restoration in Chile <em>Trevor Walter</em></h4>
+									<p>UW SEFS alumni Trevor Walter is working with the Nature Conservancy to determine the best means of ecological restoration
+										in a Chilean reserve that is marbled with nonnative eucalyptus plantations.</p>
+									<p>Trevor is seeking a means to restore the plantations to native forest cover while maximizing revenue and promoting
+										community engagement via employment in the restoration activities.
+									</p>
+								</section>
 							</article>
 
 						</div>
@@ -193,11 +176,14 @@
 							<!-- Sidebar -->
 
 							<section>
-								<h3>Solution methods for multi-objective optimization</h3>
-								<p>Looking for more info on how we solve our models? <a href="research.html#alpha-delta">Jump to the section below on the alpha-delta method</a>.
-									Really want to see more? Check out the implementation on GitHub</p>
+								<h3>Visualizing multi-objective optimization results</h3>
+								<p>
+									I built the Multi-Objective Optimization Visualization (MOO Viz) tool in an effort to better understand the solutions to
+									multi-objective models. The tool is under development, but it currently boasts some interesting objective-conflict
+									statistics, and many more features are just around the corner.
+								</p>
 								<footer>
-									<a href="https://github.com/nkullman/AlphaDelta" class="button">Alpha-delta on GitHub</a>
+									<a href="nkullman.github.io/mooViz" class="button">Check out MOO Viz</a>
 								</footer>
 							</section>
 						</div>
@@ -208,38 +194,6 @@
 
 		<!-- Footer -->
 		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<section class="3u 6u(narrower) 12u$(mobilep)">
-						<h3>UW & QERM</h3>
-						<ul class="links">
-
-							<li><a href="http://depts.washington.edu/qerm/">QERM</a></li>
-							<li><a href="http://www.sefs.washington.edu/">School of Forestry</a></li>
-							<li><a href="http://www.washington.edu/">University of Washington</a></li>
-							<li><a href="http://www.fs.fed.us/">US Forest Service</a></li>
-
-						</ul>
-					</section>
-					<section class="3u 6u$(narrower) 12u$(mobilep)">
-						<h3>Mentioned above</h3>
-						<ul class="links">
-							<li><a href="http://www.fs.usda.gov/main/deschutes/home">Deschutes NF</a></li>
-							<li><a href="http://www.ipcc.ch/report/ar5/syr/">Climate change</a></li>
-							<li><a href="https://en.wikipedia.org/wiki/Multi-objective_optimization">Multi-objective optimization</a></li>
-							<li><a href="http://www.nature.org/">The Nature Conservancy</a></li>
-						</ul>
-					</section>
-					<section class="6u 12u(narrower)">
-						<h3>Read on...</h3>
-						<p>I also recently started working with folks at the Chugach National Forest alongside labmate Svetlana Schroder. We are
-							still investigating the study area to determine objectives and are excited about the upcoming project. Check back
-							soon for updates...
-						</p>
-
-					</section>
-				</div>
-			</div>
 
 			<!-- Icons -->
 			<ul class="icons">
@@ -261,7 +215,6 @@
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
-	<script src="http://latex.codecogs.com/latexit.js"></script>
 
 </body>
 
