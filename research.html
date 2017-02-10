@@ -15,15 +15,16 @@
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
 		ga('create', 'UA-67398705-2', 'auto');
 		ga('send', 'pageview');
-		
-		</script>
+	</script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
 					<li class="current"><a href="./">Home</a></li>
 					<li>
 						<a href="research.html">Research</a>
-						<ul style="text-align: left;">
+						<ul>
 							<li><a href="research.html#eVRO">Electric vehicle routing optimization</a></li>
 							<li><a href="research.html#deschutes">Climate change and ecosystem services</a></li>
 							<li style="text-align: center;"><a href="research.html">All...</a></li>
@@ -72,17 +73,77 @@
 						<div id="content">
 
 							<!-- Content -->
+							<h2>Research</h2>
 
-							<article>
+							<article id="eVRO">
 								<header>
-									<h2>Research <br><em>Multi-objective optimization</em></h2>
+									<h2><em>Electric Vehicle Routing Optimization</em></h2>
 									<p>
-										My research surrounds multi-objective optimization: developing models and the software to solve them and analyze the results.
-										For my masters thesis, I am using optimization to study forest ecosystem services and their response to climate
-										change. Read on to learn more.
+										For my PhD, I am investigating dynamic decision making in the routing of electric vehicles. We are specifically interested
+										in the case where the charging infrastructure is publicly available.
+									</p>
+								</header>
+								<section>
+									<span class="image featured">
+												<figure>
+													<img src="images/jeSuisElectrique.jpg" alt="Electric vehicles" />
+												</figure>
+											</span>
+									<p>
+										Electric vehicles are increasing in popularity as we try to curb our reliance on fossil fuels. Companies like Tesla are making
+										EVs an attractive option in the consumer market, but the transition to EVs has been slower for goods distribution.
+										This is largely a result of EVs' more lengthy and frequent recharging/refueling requirements compared to internal
+										combustion engine vehicles. Together with my advisors, <a href="http://www.jorge-mendoza.com/">Jorge Mendoza</a> and
+										<a href="http://www.slu.edu/~goodson/">Justin Goodson</a>, I am seeking to mitigate these shortcomings by finding
+										more efficient routing schemes for EVs.
+									</p>
+
+									<h4>The EVRP-MRUA</h4>
+									<p>
+										Motivated by environmental concerns and regulations, electric vehicles (EVs) are becoming more popular in supply chain distribution
+										functions (e.g., La Poste, UPS, Coca Cola). However, EVs pose operational challenges to which their conventional
+										petroleum-based counterparts are immune. For instance, EVs' driving ranges are often only 25 percent that of conventional
+										petroleum-based vehicles' (CVs), charging infrastructure is still relatively sparse compared to the network of
+										refueling stations for CVs, and the time required to charge an EV can range from 30 minutes to 12 hours depending
+										on charging technology - orders of magnitude longer than the time needed to refuel a CV.
+									</p>
+									<p>
+										There are two general approaches to overcoming these operational challenges. The first is a simple approach in which routes
+										are restricted to the vehicle's autonomy. That is, the EV is routed back to the depot when its battery nears depletion
+										so it may charge overnight in preparation for the subsequent day's deliveries. In the second approach, the EV is
+										allowed to perform mid-route recharging by taking advantage of charging infrastructure in the field.
+									</p>
+									<p>
+										Past research has shown that the second approach offers cost savings, because mid-route recharging allows for a decrease in the total
+										distance traveled and an increase in the capacity of a single EV, thereby reducing the number of vehicles and drivers
+										needed. However, these studies that have considered mid-route recharging 
+										make the assumption that the charging stations (CSs) are always available to the EV when it arrives to charge.
+										In reality, this is often not the case. Because charging station infrastructure is limited and EVs require significant
+										time to charge, charging stations will often be unavailable when an EV arrives, and the EV may be forced to queue.
+										This discrepancy between modeling assumptions and reality has thus far prohibited logistics companies from implementing
+										mid-route recharging, despite the suggested cost savings.
+									</p>
+									<p>
+										Our research reduces this discrepancy by more realistically modeling both the uncertainty in availability and the queuing
+										process at public charging infrastructure. We model the EV Routing Problem with Mid-route Recharging and Uncertain
+										Availability (EVRP-MRUA) as a Markov decision process and implement a stochastic dynamic programming solution. 
+										Our work aims to enable logistics companies to take advantage of the increases
+										in capacity offered by mid-route recharging, thus extending the utility of EVs as delivery vehicles.
+									</p>
+								</section>
+							</article>
+
+							<article id="masters-work">
+								<header>
+									<h2><em>Optimization in Natural Resource Management</em></h2>
+									<p>
+										My masters research focused on the application of optimization methods to improve or better understand natural resource
+										management practices. My masters thesis specifically emphasized multi-objective optimization. I developed a new method of 
+										quantifying conflict among objective functions. I also developed software to solve our multi-objective models and analyze the results.
 									</p>
 
 								</header>
+
 								<section id="deschutes">
 									<h3>Climate Change and the Deschutes National Forest</h3>
 									<span class="image featured">
@@ -92,10 +153,10 @@
 												</figure>
 											</span>
 									<p>The Deschutes National Forest offers recreation, clean air, carbon storage, wildlife habitat, clean water, and countless
-										other services. But it is also a severe wildfire waiting to happen, and climate change is not expected to improve
-										matters. The Forest Service wants to curb this risk through fuels removal, but what schedule of treatments is most
+										other services. But it is also at risk for high severity wildfire, and climate change is not expected to improve
+										matters. The US Forest Service wants to curb this risk through fuels removal, but what schedule of treatments is most
 										effective in consideration of climate uncertainties and with minimal impact to the forest and its provision of
-										services? How does the answer change if we vary our assumption of climate change intensity?
+										services? How does the answer change if climate change is less intense? More intense?
 									</p>
 
 									<h4>Forests and climate change</h4>
@@ -116,26 +177,44 @@
 										them. When we look at the simultaneous provision of wildlife habitat, carbon storage, and resistance to wildfire,
 										how does an increase in any one service alter our ability to acquire an amount of another? And how do these trade-offs
 										change as a function of climate?</p>
-									<p>We are working with the Forest Service to answer these questions. Under a few climate change scenarios, we will
-										determine the optimal management strategy for reducing fire hazard in the Deschutes National Forest while maximizing
-										northern spotted owl habitat and preserving watershed health.</p>
+									<p>We are working with the Forest Service to answer these questions. Under a few climate change scenarios, we are
+										determining optimal management strategies for reducing fire hazard in the Deschutes National Forest while maximizing
+										northern spotted owl habitat and preserving watershed health. We also consider how the conflict among these objectives 
+										changes with climate.</p>
 								</section>
+
 								<section id="chugach">
-									<h3>A single-objective model for HBI reduction in the Chugach National Forest</h3>
-									<p>
-										Our lab also recently started a project with folks in the Chugach National Forest. The objective is to reduce human-bear
-										interactions (HBI) near their world class sockeye salmon fishery that draws more than 70,000 anglers over the course
-										of a summer. The project is still in its early phases, so check back as we continue to develop the model.
-									</p>
+									<h3>Reducing Human-Bear Conflict in the Chugach National Forest</h3>
+									<p>During my time as a QERM student, I also investigated the reduction of human-bear conflicts in the Chugach National Forest.</p>
 									<span class="image featured">
 												<figure>
 													<img src="images/russianRiverSockeyeRun.jpg" alt="Fishing the Russian River." />
 													<figcaption>Sockeye fishing at the Russian River in the Chugach National Forest. <em>Image credit: https://thekenai.wordpress.com/</em></figcaption>
 												</figure>
 											</span>
+									<p>
+										Human-bear conflict (HBC) is of primary concern to the US Forest Service (USFS) personnel managing the Russian River watershed 
+										in the Chugach National Forest. The area's fishery draws humans and bears alike, serving as brown bear (<em>Ursus arctos</em>) 
+										core habitat and receiving upwards of 70,000 anglers per summer. HBCs have caused the personal injury of visitors to the 
+										Russian River watershed and have also resulted in the death of bears in the defense of life or property. In 2013, a multiagency 
+										task force in the Chugach National Forest created a five-year action plan specifically targeting the reduction of human-bear conflicts.
+									</p>
+									<p>
+										In the report a diverse set of management strategies are proposed to mitigate HBC. Among them is the improvement of visibility near 
+										areas of human use, such as fishing spots, hiking trails, campgrounds, and roads. According to the report, improved sighting distance 
+										will reduce the likelihood that people and bears will encounter each other in close proximity and lower the potential for human-bear 
+										conflict. To achieve the increased sighting distance, the multiagency task force suggests vegetation clearing. So as to be sensitive 
+										to cultural resource values associated with the Sqilantnu Archaeological District and so as not to jeopardize riparian restoration work, 
+										the proposed vegetation treatments are what may be best described as "weedwacking" the bordering vegetation near human use areas.
+									</p>
+									<p>
+										The extent to which this vegetation treatment may be performed across the watershed depends on the allocation of budget to the task.
+										For a given budget, our research aims to find the optimal spatial and temporal distribution of these vegetation treatments so that 
+										throughout the watershed, sighting distance is maximized and, hopefully, HBC is minimized.
+									</p>
 								</section>
 								<section id="alpha-delta">
-									<h3>Solving models with the Alpha-Delta algorithm</h3>
+									<h3>Solving multi-objective models with the Alpha-Delta algorithm</h3>
 									<p>The alpha-delta algorithm is in the family of methods used to find Pareto efficient solutions to multi-objective
 										optimization models. (Others in this family include the epsilon-constraint method and weighted sums.) The algorithm
 										finds optimal solutions by iteratively slicing the solution space with a tilted hyperplane.</p>
@@ -143,7 +222,7 @@
 										API for IBM's CPLEX optimization engine. Given a model file and a couple of parameters, it finds the model's Pareto
 										frontier.
 									</p>
-									<p>A few researchers beyond our lab have put it to use. Below are short descriptions of some of the projects whose
+									<p>A few researchers beyond our lab have put it to use. Below are short descriptions of two of the projects whose
 										models have been solved with the program.</p>
 									<span class="image featured">
 												<figure>
@@ -174,14 +253,17 @@
 							<!-- Sidebar -->
 
 							<section>
-								<h3>Visualizing multi-objective optimization results</h3>
+								<h3>VRP-REP Mapper</h3>
 								<p>
-									I built the Multi-Objective Optimization Visualization (MOO Viz) tool in an effort to better understand the solutions to
-									multi-objective models. The tool is under development, but it currently boasts some interesting objective-conflict
-									statistics, and many more features are just around the corner.
+									The <a href="vrp-rep.org">Vehicle Routing Problem REPository (VRP-REP)</a> is a place where researchers in vehicle
+									routing can share datasets and solutions using a common format. Using a common format better allows researchers
+									in the field to share, review, and collaborate with others.
 								</p>
+
+								<p>I built a simple mapping utility for VRP datasets and solutions that are formatted according the VRP-REP specification.</p>
+
 								<footer>
-									<a href="nkullman.github.io/mooViz" class="button">Check out MOO Viz</a>
+									<a href="https://vrp-rep.github.io/mapper/" class="button">Check out Mapper</a>
 								</footer>
 							</section>
 						</div>
@@ -197,9 +279,10 @@
 				<div class="row">
 					<section class="9u 12u(narrower) -1u">
 						<h3>Want to see more?</h3>
-						<p>I've worked on a number of projects outside my formal research as well, including the <a href="projects.html#BFAssistant">optimization of dessert schedules</a>
-							and <a href="projects.html#GreenLogistics">electric vehicles</a>, and <a href="projects.html#VaccineEfficacy">visualizations to aid in HIV vaccine tests</a> and to <a href="projects.html#FremontBikeViz">see when Seattleites are riding their
-							bikes</a>.
+						<p>I've worked on a number of projects outside my formal research, including the 
+							<a href="projects.html#BFAssistant">optimization of dessert schedules</a> and 
+							<a href="projects.html#VaccineEfficacy">visualizations to aid in HIV vaccine tests</a> and to 
+							<a href="projects.html#FremontBikeViz">see when Seattleites are riding their bikes</a>.
 						</p>
 						<p> You can find those and others on my <a href="projects.html">Projects page</a>.</p>
 					</section>
