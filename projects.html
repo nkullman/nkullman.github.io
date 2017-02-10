@@ -74,9 +74,24 @@
 
 					<article>
 						<header>
-							<h2>Projects</h2>
-							<p>Extra-curriculars pursued in my free time</p>
+							<h2>Other Projects</h2>
 						</header>
+						<section id="Mapper">
+							<h3>VRP-REP Mapper</h3>
+
+							<span class="image"><a href="https://vrp-rep.github.io/mapper/"><img style="width:50%" src="images/mapper.PNG" alt="VRP-REP Mapper" title="VRP-REP Mapper"/></a></span>
+
+							<p>
+								The <a href="vrp-rep.org">Vehicle Routing Problem REPository (VRP-REP)</a> is a place where researchers in vehicle routing can share datasets and solutions
+								using a common format. Using a common format better allows researchers in the field to share, review, and collaborate with others.
+								The underlying motivation is to accelerate our advancement of the state of the art in vehicle routing and logistics.
+							</p>
+
+							<p>I built a simple mapping utility for VRP datasets and solutions that are formatted according the VRP-REP specification.</p>
+
+							<p><a href="https://vrp-rep.github.io/mapper/">Access the tool</a> | <a href="https://github.com/VRP-REP/mapper">View the source code</a></p>
+
+						</section>
 						<section id="GreenLogistics">
 							<h3>Green Logistics</h3>
 
@@ -90,7 +105,7 @@
 							</p>
 
 							<p>I joined Justin and Jorge's <a href="http://www.e-vro.info/">electric vehicle routing optimization (e-VRO)</a> team
-								in 2016. The project is just getting underway, but in the coming months we'll be building a stochastic dynamic program
+								in 2016. We are building a stochastic dynamic program
 								to find optimal delivery routes while capturing uncertainty in charging station availability. Check back here or
 								the <a href="https://twitter.com/e_vro">e-VRO twitter feed</a> for updates!</p>
 
@@ -130,8 +145,8 @@
 							</p>
 							<p>
 								It turns out there is no one perfect answer to this question - researchers have used many measures to quantify conflict.
-								We started trying them and weren't content with what we were seeing, so we decided to see if we could come up with
-								a measure of our own. To aid in our experimentation, I made what I refer to as the <a href="https://bl.ocks.org/nkullman/f65d5619843dc22e061d957249121408">Conflict and Correlation Sandbox</a>.
+								We started trying them and weren't content with any of the methods, so we decided to see if we could come up with
+								one of our own. To aid in our experimentation, I made what I refer to as the <a href="https://bl.ocks.org/nkullman/f65d5619843dc22e061d957249121408">Conflict and Correlation Sandbox</a>.
 								You can add data points to a projection of two objectives and see how various conflict or correlation measures respond.
 							</p>
 
@@ -161,31 +176,34 @@
 							<span class="image featured"><a href="http://sieve.fredhutch.org/viz"><img src="images/sieve.png" alt="SIEVE-tool-snapshot" title="Snapshot of SIEVE"/></a></span>
 
 							<p>For the final project in Jeff Heer's "Data Visualization" class, a couple of classmates and I built a tool for HIV
-								researchers at Fred Hutch Research Center. The result of the project was SIEVE (<b>S</b>tatistical <b>I</b>nteractive
-								<b>E</b>xplorer of <b>V</b>accine <b>E</b>fficacy).</p>
+								researchers at Fred Hutch Research Center. The result of the project was <em>SIEVE</em>, the Statistical Interactive
+								Explorer of Vaccine Efficacy.</p>
 
 							<p>SIEVE is an interactive visualization for exploring breakthrough sequence data from vaccine efficacy trials. Specifically,
 								SIEVE aids the process of "sieve analysis", which compares the genetic sequences of viruses isolated from infected
 								vaccine versus placebo recipients. The visualization allows researchers to study the effect of the vaccine at the
 								level of amino acids in the breakthrough viruses and find statistically significant differences in the groups.</p>
 
-							<p><em>New!</em> SIEVE has a new home at Fred Hutch: <a href="http://sieve.fredhutch.org/viz">see it here</a>. We also
-								recently added many more datasets to SIEVE, making it not only a powerful visualization and analysis tool but also
+							<p>SIEVE has come a long way since its creation in 2015. The tool has since been integrated to Fred Hutch's website. You can <a href="http://sieve.fredhutch.org/viz">see it here</a>.
+								We also recently added many more datasets to SIEVE, making it not only a powerful visualization and analysis tool but also
 								a unique source for consolidated sieve analysis studies.</p>
 
 							<p><a href="http://sieve.fredhutch.org/viz">Access the tool</a> | <a href="https://github.com/nkullman/SIEVE">Source code</a></p>
 						</section>
 
 						<section id="FremontBikeViz">
-							<h3>Fremont Bridge bicycle data<br>
-								<em><Tracking></Tracking> cyclists' ridership</em></h3>
+							<h3>Fremont Bridge bicycle data</h3>
 
 							<span class="image featured"><a href="http://nkullman.github.io/bikedata/"><img style="width:50%" src="images/fremontbridgebikecounter.jpg" alt="Fremont-Bridge-Bike-Counter" title="Fremont Bridge bicycle counter"/></a><span style="font-size:.75em;"><em>Image credit: Seattle PI</em></span></span>
 
 							<p>In 2012, Seattle DOT installed bike counters on the Fremont Bridge. Since then, hourly counts of the number of cyclists
 								crossing each side of the bridge have been piling up. Graham Clenaghan and I took to visualizing the data. We created
 								a simple interactive tool to let you explore bicycle ridership across the bridge as a function of parameters like
-								weather, time of the day, and time of the year.</p>
+								weather, time of day, and time of the year.</p>
+							<p>
+								Since the tool does not refresh weather or ridership data, the analysis is a little stale at this point, but I would argue that
+								the insights it provides are still interesting.
+							</p>
 
 							<p><a href="http://nkullman.github.io/bikedata/">Access the tool</a> | <a href="https://github.com/nkullman/bikedata">Source code</a>.</p>
 						</section>
