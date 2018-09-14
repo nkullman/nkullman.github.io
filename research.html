@@ -97,75 +97,7 @@
                         vehicle routing and access to charging infrastructure.
                     </p>
                     <p>
-                        <!-- replace panel with link to article once available -->
-                        Until a working paper is ready (expected later this year), you can learn more about the project by expanding the panel below:
-                        <div class="panel-group">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#phdResearch">Additional details about electric vehicle routing</a>
-                                    </h4>
-                                </div>
-                                <div id="phdResearch" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <h4>The EVRP-MRUA: Heuristic policies and lower bounds</h4>
-                                        <p>
-                                            Motivated by environmental concerns and regulations, electric vehicles (EVs) are becoming more popular in supply chain distribution
-                                            functions (e.g., La Poste, UPS, Coca Cola). However, EVs pose operational challenges
-                                            to which their conventional petroleum-based counterparts are immune. For instance,
-                                            EVs' driving ranges are often only 25 percent that of conventional petroleum-based
-                                            vehicles' (CVs), charging infrastructure is still relatively sparse compared
-                                            to the network of refueling stations for CVs, and the time required to charge
-                                            an EV can range from 30 minutes to 12 hours depending on charging technology
-                                            - orders of magnitude longer than the time needed to refuel a CV.
-                                        </p>
-                                        <p>
-                                            There are two general approaches to overcoming these operational challenges. The first is a simple approach in which routes
-                                            are restricted to the vehicle's autonomy. That is, the EV is routed back to the
-                                            depot when its battery nears depletion so it may charge overnight in preparation
-                                            for the subsequent day's deliveries. In the second approach, the EV is allowed
-                                            to perform mid-route recharging by taking advantage of charging infrastructure
-                                            in the field.
-                                        </p>
-                                        <p>
-                                            Past research has shown that the second approach offers cost savings, because mid-route recharging allows for a decrease
-                                            in the total distance traveled and an increase in the capacity of a single EV,
-                                            thereby reducing the number of vehicles and drivers needed. However, these studies
-                                            that have considered mid-route recharging make the assumption that the charging
-                                            stations (CSs) are always available to the EV when it arrives to charge. In reality,
-                                            this is often not the case. Because charging station infrastructure is limited
-                                            and EVs require significant time to charge, charging stations will often be unavailable
-                                            when an EV arrives, and the EV may be forced to queue. This discrepancy between
-                                            modeling assumptions and reality has thus far prohibited logistics companies
-                                            from implementing mid-route recharging, despite the suggested cost savings.
-                                        </p>
-                                        <p>
-                                            Our research aims to reduce this discrepancy by more realistically modeling both the uncertainty in availability and the
-                                            queuing process at public charging infrastructure. We model the EV Routing Problem
-                                            with Mid-route Recharging and Uncertain Availability (EVRP-MRUA) as a Markov
-                                            decision process and implement a stochastic dynamic programming (SDP) solution.
-                                        </p>
-                                        <p>
-                                            In addition to developing a handful of heuristic policies to solve the SDP, we also employ an information relaxation to determine
-                                            the optimal solution with perfect information. This gives us a lower bound and
-                                            therefore a measure of goodness for our policies. We do this by formulating a
-                                            mixed integer linear program that is equivalent to the SDP.
-                                        </p>
-                                        <p>
-                                            Further, we impose information penalties to tighten the lower bound. Current results indicate that our heuristic policies
-                                            are performing well - within 5% of the optimal policy.
-                                        </p>
-                                        <p>
-                                            Our work aims to enable logistics companies to take advantage of the increases in capacity offered by mid-route recharging,
-                                            thus extending the utility of EVs as delivery vehicles.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </p>
-                    <p>
-                        Slides from my presentation at the first triennial INFORMS TSL Conference can be found <a href="./assets/pubs/Kullman_eVRPMRUA_TSL2017.pdf">here</a>.
+                        Until a pre-print is ready (expected later this year), you can learn more about the project from our recent presentation at <a href="http://convegni.unica.it/odysseus2018/">Odysseus</a>. Our extended abstract is available <a href="https://hal.archives-ouvertes.fr/hal-01814644/document">here</a>, and our slides <a href="./assets/pubs/Kullman_E-VRP-UA_Odysseus2018.pdf">here</a>.
                     </p>
                     <div class="page-header">
                         <h3>Prior Research</h3>
