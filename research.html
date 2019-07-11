@@ -63,14 +63,12 @@
                             <li><a href="./projects.html#Mapper">VRP-REP Mapper</a></li>
                             <li><a href="./projects.html#VaccineEfficacy">Vaccine Efficacy</a></li>
                             <li><a href="./projects.html#BFAssistant">Birthday Fairy Assistant</a></li>
-                            <li role="separator" class="divider"></li>
                             <li><a href="./projects.html">All...</a></li>
                         </ul>
                     </li>
                     <li><a href="./about.html">About me</a></li>
                     <li><a href="./KullmanNicholas_resume.pdf">Résumé</a></li>
                     <li><a href="./KullmanNicholas_CV.pdf">CV</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -89,26 +87,49 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="bs-component">
-                    <div class="page-header">
-                        <h3>Current Research</h3>
-                    </div>
                     <p>
-                        My current research employs stochastic dynamic programs and Markov decision processes to answer questions regarding electric
-                        vehicle routing and access to charging infrastructure.
-                    </p>
-                    <p>
-                        Learn more in our report <a href="https://hal.archives-ouvertes.fr/hal-01928730">here</a>.
+                        I work on problems involving electric vehicle routing and logistics, with a particular interest in such problems that involve uncertainty and real-time decision making.
                     </p>
                     <div class="page-header">
-                        <h3>Prior Research</h3>
+                        <h4>Unknown charging station demands</h4>
                     </div>
                     <p>
-                        Previously, I used multi-objective math programs to solve problems regarding natural resource management under alternative
-                        climate change scenarios. These problems served as a platform on which to study the conflict among objectives in multi-objective
-                        optimization.
+                        One such problem involes dynamically routing an electric vehicle over a set of customers. 
+                        If the EV will need to stop and recharge while traveling about and serving these customers, how should it plan those stops?
+                        We study this problem in the case where demand at charging stations is unknown.
                     </p>
                     <p>
-                        You can learn more about this research
+                        Complete details of how we solve this problem are available in <a href="https://hal.archives-ouvertes.fr/hal-01928730">this manuscript</a>.
+                    </p>
+                    <div class="page-header">
+                        <h4>Operating a ridehail service with autonomous electric vehicles</h4>
+                    </div>
+                    <p>
+                        We're a few years down the road, and ridehail companies like Lyft and Uber operate fleets that consist entirely of autonomous electric vehicles.
+                        Its a Tuesday morning, rushour is heating up, and passengers are starting to request rides. 
+                        How do these ridehail companies decide which vehicle to assign to the new requests? 
+                        When should they decide to send vehicles to recharge, which vehicles should be repositioned in anticipation of future requests, and to where?
+                    </p>
+                    <p>
+                        We are tackling this problem using a combination of strategies, one of which involves deep reinforcement learning.
+                    </p>
+                    <p>
+                        Work on this project is underway, and a manuscript is not yet available. 
+                        However, the slides from my presentation of this work can be found <a href="./assets/research/ControlOfAutonomousEVFleets.pdf">here</a>.
+                    </p>
+                    <div class="page-header">
+                        <h4>Prior Research: Climate change and resource management</h4>
+                    </div>
+                    <p>
+                        Before working in transportation, I used multi-objective math programs to study how climate change might impact natural resource management.
+                        For instance, if the US Forest Service wants to reduce fire hazard without impacting the local species, how does climate change impact their ability to do this?
+                        Will more severe climate change mean more harm to the local species in order to achieve the same amount of fire hazard reduction?
+                    </p>
+                    <p>
+                        This problem also served as a platform on which to study, in general, what we mean by "conflict" among objectives in multi-objective optimization.
+                    </p>
+                    <p>
+                        More details about this research are available 
                         <a href="https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/38212/Kullman_washington_0250O_16651.pdf?sequence=1&isAllowed=y">here</a>.
                     </p>
                 </div>
@@ -122,14 +143,12 @@
     <!-- Begin footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h4>
-                        <a href="https://github.com/nkullman">GitHub</a> |
-                        <a href="https://scholar.google.com/citations?hl=en&user=zZxM6YIAAAAJ">Google Scholar</a> |
-                        <a href="https://www.linkedin.com/in/nicholaskullman/">LinkedIn</a>
-                    </h4>
-                </div>
+            <div class="panel-footer text-center">
+                <p>
+                    <a href="https://github.com/nkullman">GitHub</a> |
+                    <a href="https://scholar.google.com/citations?hl=en&user=zZxM6YIAAAAJ">Google Scholar</a> |
+                    <a href="https://www.linkedin.com/in/nicholaskullman/">LinkedIn</a>
+                </p>
             </div>
         </div>
     </footer>
